@@ -22,7 +22,7 @@ class MyLogger(object):
 def my_hook(d):
     if d['status'] == 'downloading':
         try:
-            print("\r",f"Downloading {d['filename'][7:]} to ./{d['filename'][:6]} at {(d['speed']/1000000):.2f} MiB/s ...", end="")
+            print("\r",f"Downloading {d['filename'][6:]} to ./{d['filename'][:5]} at {(d['speed']/1000000):.2f} MiB/s ...", end="")
         except:
             print("\r",f"Downloading ...", end="")
     if d['status'] == 'finished':
