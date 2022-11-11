@@ -17,3 +17,14 @@ for (let i = 1;i<list.length;i++){console.log(list[i].querySelector("b").title)}
 python ytdl.py
 ```
 然后等待一会，歌曲会自动下载到`/songs`文件夹内。
+
+
+## yt-dlp使用
+
+```powershell
+yt-dlp -i --format bestaudio --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" --yes-playlist [index] 
+```
+
+index可以从视频的url里获取，(`watch?v=`后跟视频代号，`&list=`后跟歌单代号)。<br/>
+
+`--yes-playlist`为可选项，加上可下载整个歌单。
